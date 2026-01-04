@@ -50,7 +50,7 @@ Key Elements:
 Actions:
 •	▶ Start Learning
 •	▶ Continue as Guest
-________________________________________
+
 2️⃣ User Input & Personalization
 Field	Purpose
 Name	Personalizes quiz & feedback
