@@ -130,6 +130,44 @@ Email (optional)	Learning tips (no spam)
 ✔ Clear helper text builds trust
 ✔ Guest mode lowers entry barrier
 
+❓ Quiz Attempt Screen
+Key Features:
+•	Question progress (e.g., 1/5)
+•	Visual progress bar
+•	Topic & difficulty indicators
+•	Contextual subtopic tags
+Navigation:
+•	Previous / Next buttons
+•	Quick jump to any question
+
+📊 Quiz Completion Summary
+Metric	Description
+Score	Percentage & grade
+Correct	Number of correct answers
+Incorrect	Mistakes made
+Unanswered	  Skipped questions  
+ 
+Actions:
+•	📥 Download Report
+•	🔁 Start New Quiz
+
+🎯 Areas to Focus On
+SmartQuizzer highlights weak topics automatically.
+Example:
+❌ Data Types
+❌ JVM Architecture
+✔ Focused
+✔ Actionable
+✔ Learner-friendly
+🤖 AI Performance Analysis
+AI-Generated Insights Include:
+•	Overall performance summary
+•	Strong concepts
+•	Weak areas
+•	Personalized study recommendations
+Performance → Analysis → Recommendations
+This transforms assessment into guided learning.
+
 
 
 
