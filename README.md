@@ -39,3 +39,54 @@ Deployment	Render
 ✔ E-Learning Platforms
 ✔ Training Organizations
 
+
+3️⃣ Quiz Configuration Screen
+Purpose: Create a customized quiz.
+📚 Quiz Source Selection
+•	Topic (Manual input)
+•	Document Upload
+•	Text Paste
+🎯 Difficulty Levels
+•	Easy (Beginner)
+•	Medium (Intermediate)
+•	Hard (Advanced)
+🔢 Quiz Length
+•	Select number of questions (e.g., 5)
+
+[ Topic Input ] → [ Difficulty ] → [ No. of Questions ]
+                         │
+                         ▼
+                  Generate AI Quiz
+🏗 System Architecture
+Frontend (React)
+     │
+     ▼
+Backend API (Express)
+     │
+     ▼
+AI Engine (OpenAI GPT)
+     │
+     ▼
+Adaptive Logic + Evaluation
+     │
+     ▼
+MongoDB (Store Results & Analytics)
+
+🧠 Adaptive Quiz Logic
+User Answer
+     │
+     ▼
+Answer Evaluation
+     │
+     ▼
+Performance Score
+     │
+     ▼
+Difficulty Adjusted
+     │
+     ▼
+Next Question Generated
+✔ Correct answers → slightly harder questions
+✔ Incorrect answers → simpler or concept-focused questions
+
+
