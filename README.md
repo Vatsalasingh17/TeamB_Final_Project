@@ -22,6 +22,8 @@ SmartQuizzer uses LLMs (OpenAI GPT models) to:
 •	Adapt difficulty based on performance
 •	Provide actionable learning feedback
 Unlike static quizzes, SmartQuizzer acts as a guided learning assistant.
+
+
 Layer	Technology
 Frontend	React, Tailwind CSS
 Backend	Node.js, Express.js
@@ -29,6 +31,7 @@ Database	MongoDB
 AI / LLM	OpenAI GPT Models
 Adaptive Engine	Custom Difficulty Evaluator
 Deployment	Render
+
 🎯 Designed For
 ✔ Students
 ✔ Teachers & Trainers
