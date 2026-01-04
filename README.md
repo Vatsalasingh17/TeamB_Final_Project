@@ -39,6 +39,24 @@ Deployment	Render
 ✔ E-Learning Platforms
 ✔ Training Organizations
 
+🧑‍💻 User Journey (Screen-wise Explanation)
+1️⃣ Landing / Welcome Screen
+Purpose:
+Introduce the platform and allow quick onboarding.
+Key Elements:
+•	Friendly learning-focused UI
+•	App introduction & motivation text
+•	Call-to-Action buttons
+Actions:
+•	▶ Start Learning
+•	▶ Continue as Guest
+________________________________________
+2️⃣ User Input & Personalization
+Field	Purpose
+Name	Personalizes quiz & feedback
+Email (optional)	Learning tips (no spam)
+✔ Clear helper text builds trust
+✔ Guest mode lowers entry barrier
 
 3️⃣ Quiz Configuration Screen
 Purpose: Create a customized quiz.
@@ -111,24 +129,7 @@ AI Evaluation
  ▼
 Performance Analysis & Feedback
 
-🧑‍💻 User Journey (Screen-wise Explanation)
-1️⃣ Landing / Welcome Screen
-Purpose:
-Introduce the platform and allow quick onboarding.
-Key Elements:
-•	Friendly learning-focused UI
-•	App introduction & motivation text
-•	Call-to-Action buttons
-Actions:
-•	▶ Start Learning
-•	▶ Continue as Guest
-________________________________________
-2️⃣ User Input & Personalization
-Field	Purpose
-Name	Personalizes quiz & feedback
-Email (optional)	Learning tips (no spam)
-✔ Clear helper text builds trust
-✔ Guest mode lowers entry barrier
+---
 
 ❓ Quiz Attempt Screen
 Key Features:
@@ -139,6 +140,7 @@ Key Features:
 Navigation:
 •	Previous / Next buttons
 •	Quick jump to any question
+
 
 📊 Quiz Completion Summary
 Metric	Description
