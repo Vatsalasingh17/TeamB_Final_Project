@@ -166,7 +166,7 @@ AI-Generated Insights Include:
 •	Weak areas
 •	Personalized study recommendations
 Performance → Analysis → Recommendations
-This transforms assessment into guided learning.
+This transforms assessment into guided learning. 
 
 
 
