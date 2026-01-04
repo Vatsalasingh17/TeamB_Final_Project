@@ -90,3 +90,46 @@ Next Question Generated
 ✔ Incorrect answers → simpler or concept-focused questions
 
 
+🔄 Application Flow (High-Level)
+User
+ │
+ ▼
+Landing Page
+ │
+ ▼
+Quiz Configuration
+ │
+ ▼
+AI Quiz Generation
+ │
+ ▼
+Quiz Attempt
+ │
+ ▼
+AI Evaluation
+ │
+ ▼
+Performance Analysis & Feedback
+
+🧑‍💻 User Journey (Screen-wise Explanation)
+1️⃣ Landing / Welcome Screen
+Purpose:
+Introduce the platform and allow quick onboarding.
+Key Elements:
+•	Friendly learning-focused UI
+•	App introduction & motivation text
+•	Call-to-Action buttons
+Actions:
+•	▶ Start Learning
+•	▶ Continue as Guest
+________________________________________
+2️⃣ User Input & Personalization
+Field	Purpose
+Name	Personalizes quiz & feedback
+Email (optional)	Learning tips (no spam)
+✔ Clear helper text builds trust
+✔ Guest mode lowers entry barrier
+
+
+
+
