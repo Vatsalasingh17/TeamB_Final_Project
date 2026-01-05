@@ -8,7 +8,7 @@
 
 **An AI-powered adaptive quiz platform that personalizes learning through intelligent evaluation, dynamic difficulty adjustment, and actionable feedback.**
 
-[🌐 Live Demo](https://smartquizzer-adaptive-ai-based-quiz-7shn.onrender.com/) | [📖 Documentation](#) | [🐛 Report Bug](#) | [✨ Request Feature](#)
+[🌐 Live Demo](https://smartquizzer-adaptive-ai-based-quiz-7shn.onrender.com/)
 
 </div>
 
