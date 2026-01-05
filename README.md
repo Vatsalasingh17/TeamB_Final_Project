@@ -4,7 +4,7 @@ Adaptive AI-Based Quiz Generator
 </h1>
 
 <p align="center">
-<b>AI-powered adaptive quiz platform that personalizes learning through intelligent evaluation and feedback.</b>
+<b>An AI-powered adaptive quiz platform that personalizes learning using intelligent question generation, real-time evaluation, and dynamic difficulty adjustment.</b>
 </p>
 
 <p align="center">
@@ -13,351 +13,124 @@ Adaptive AI-Based Quiz Generator
 
 ---
 
-## 🧠 WHAT IS SMARTQUIZZER?
+## 🧠 Overview
 
-SmartQuizzer is an **AI-driven adaptive quiz platform** that generates personalized quizzes from topics, text, or documents.
+**SmartQuizzer** is an intelligent quiz and learning platform powered by **Large Language Models (LLMs)**.  
+It generates quizzes from **topics, text, or documents**, evaluates answers using AI, and adapts difficulty based on user performance.
 
-It dynamically adjusts difficulty, evaluates responses using LLMs, and provides actionable learning insights — transforming assessments into **guided learning experiences**.
-
----
-
-## 📌 TABLE OF CONTENTS
-
-1. 🧠 Introduction  
-2. 🛠 Tech Stack  
-3. 🎯 Who Is It For  
-4. 🔄 Application Flow  
-5. 🧑‍💻 User Journey  
-6. 🏗 System Architecture  
-7. 🧩 Adaptive Quiz Logic  
-8. ✨ Key Features  
-9. 🤖 AI Evaluation & Feedback  
-10. 🚀 Future Enhancements  
+Unlike static quiz apps, SmartQuizzer works as a **guided learning system**, helping users understand *what to learn next*.
 
 ---
 
-## 🧠 INTRODUCTION
+## 📌 Table of Contents
 
-SmartQuizzer uses **Large Language Models (LLMs)** to:
-
-✔ Generate intelligent quiz questions  
-✔ Evaluate user responses  
-✔ Adapt difficulty in real time  
-✔ Provide personalized feedback  
-
-Unlike static quizzes, SmartQuizzer behaves like a **learning assistant**.
-
----
-
-## 🛠 TECH STACK
-
-Frontend  
-│  
-▼  
-React + Tailwind CSS  
-
-Backend  
-│  
-▼  
-Node.js + Express.js  
-
-Database  
-│  
-▼  
-MongoDB  
-
-AI Engine  
-│  
-▼  
-OpenAI GPT Models  
-
-Deployment  
-│  
-▼  
-Render  
+1. Introduction  
+2. Tech Stack  
+3. Target Users  
+4. Complete System Flow (Mermaid)  
+5. Architecture Diagram (Mermaid)  
+6. Adaptive Quiz Logic (Mermaid)  
+7. Application Flow (Mermaid)  
+8. User Journey Flow (Mermaid)  
+9. AI Evaluation & Feedback Flow (Mermaid)  
+10. Key Features  
+11. Learning Outcomes  
+12. Future Enhancements  
 
 ---
 
-## 🎯 WHO IS IT FOR?
+## 🧠 Introduction
 
-Students  
-│  
-▼  
-Teachers & Trainers  
-│  
-▼  
-Interview Preparation  
-│  
-▼  
-E-Learning Platforms  
-│  
-▼  
-Training Organizations  
+SmartQuizzer uses AI to:
+
+- Generate context-aware quiz questions  
+- Evaluate answers semantically  
+- Adapt difficulty dynamically  
+- Provide personalized learning recommendations  
+
+This converts **assessment into continuous learning**.
 
 ---
 
-## 🔄 APPLICATION FLOW (HIGH LEVEL)
+## 🛠 Tech Stack
 
-User  
-│  
-▼  
-Landing Page  
-│  
-▼  
-Quiz Configuration  
-│  
-▼  
-AI Quiz Generation  
-│  
-▼  
-Quiz Attempt  
-│  
-▼  
-AI Evaluation  
-│  
-▼  
-Performance Analysis & Feedback  
+| Layer | Technology |
+|-----|-----------|
+| Frontend | React, Tailwind CSS |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas |
+| AI / LLM | OpenAI GPT Models |
+| Logic Engine | Adaptive Difficulty Engine |
+| Deployment | Render |
 
 ---
 
-## 🧑‍💻 USER JOURNEY (SCREEN-WISE)
+## 🎯 Target Users
 
-### 1️⃣ Landing / Welcome Screen
-
-User  
-│  
-▼  
-Platform Introduction  
-│  
-▼  
-Motivational Learning Message  
-│  
-▼  
-Action Selection  
-
-Start Learning  
-│  
-▼  
-Continue as Guest  
+- Students  
+- Teachers & Trainers  
+- Interview Preparation  
+- E-learning Platforms  
+- Corporate Training Programs  
 
 ---
 
-### 2️⃣ User Input & Personalization
+## 🔄 Complete System Flow
 
-User Details  
-│  
-▼  
-Name Input (Personalization)  
-│  
-▼  
-Email (Optional)  
-│  
-▼  
-Trust via Helper Text  
-│  
-▼  
-Proceed to Quiz Setup  
+```mermaid
+flowchart TD
 
----
+U[👤 User]
+--> |Select Topic / Upload Text|
+F[💻 React Frontend]
 
-### 3️⃣ Quiz Configuration Screen
+F
+--> |Quiz Config Request|
+B[🛠 Node.js / Express Backend]
 
-Topic / Text / Document  
-│  
-▼  
-Difficulty Selection  
-│  
-▼  
-Number of Questions  
-│  
-▼  
-Generate AI Quiz  
+B
+--> |Prompt + Context|
+AI[🤖 OpenAI GPT API]
 
----
+AI
+--> |Generated Questions|
+Q[🧠 Adaptive Quiz Engine]
 
-## 🏗 SYSTEM ARCHITECTURE
+Q
+--> |Store Quiz & Answers|
+DB[(🗄 MongoDB Atlas)]
 
-Frontend (React UI)  
-│  
-▼  
-Backend API (Express)  
-│  
-▼  
-AI Engine (OpenAI GPT)  
-│  
-▼  
-Adaptive Difficulty Logic  
-│  
-▼  
-Evaluation Engine  
-│  
-▼  
-MongoDB (Results & Analytics)  
+Q
+--> |Evaluate Responses|
+E[📊 AI Evaluation Engine]
 
----
+E
+--> |Performance Metrics|
+L[📈 Learning Insights Engine]
 
-## 🧩 ADAPTIVE QUIZ LOGIC
+L
+--> |Feedback & Recommendations|
+F
+```
+# 🧩 Adaptive Quiz Logic
+flowchart TD
 
-User Answer  
-│  
-▼  
-Answer Evaluation  
-│  
-▼  
-Performance Scoring  
-│  
-▼  
-Difficulty Adjustment  
-│  
-▼  
-Next Question Generation  
+A[User Answer]
+--> B[AI Answer Evaluation]
 
-Correct Answer  
-│  
-▼  
-Higher Difficulty  
+B
+--> C[Performance Score]
 
-Incorrect Answer  
-│  
-▼  
-Concept Reinforcement  
+C
+--> D{Difficulty Decision}
 
----
+D
+-->|High Score| E[Increase Difficulty]
 
-## ✨ KEY FEATURES
+D
+-->|Low Score| F[Simplify Question]
 
-User Input  
-│  
-▼  
-AI Quiz Generation  
-│  
-▼  
-Adaptive Difficulty  
-│  
-▼  
-Real-Time Evaluation  
-│  
-▼  
-Progress Tracking  
-│  
-▼  
-Downloadable Reports  
-│  
-▼  
-Personalized Feedback  
+E --> G[Next Question]
+F --> G
 
----
 
-## ❓ QUIZ ATTEMPT SCREEN
-
-Question Display  
-│  
-▼  
-Progress Indicator  
-│  
-▼  
-Answer Selection  
-│  
-▼  
-Navigation (Prev / Next)  
-│  
-▼  
-Submit Response  
-
----
-
-## 📊 QUIZ COMPLETION SUMMARY
-
-Quiz Submission  
-│  
-▼  
-Score Calculation  
-│  
-▼  
-Correct vs Incorrect Analysis  
-│  
-▼  
-Skipped Questions  
-│  
-▼  
-Result Summary  
-
-Actions  
-│  
-▼  
-Download Report  
-│  
-▼  
-Start New Quiz  
-
----
-
-## 🎯 AREAS TO FOCUS ON
-
-Performance Data  
-│  
-▼  
-Weak Topic Detection  
-│  
-▼  
-Concept Identification  
-│  
-▼  
-Targeted Improvement Suggestions  
-
-Example  
-│  
-▼  
-❌ Data Types  
-│  
-▼  
-❌ JVM Architecture  
-
----
-
-## 🤖 AI EVALUATION & FEEDBACK
-
-Performance  
-│  
-▼  
-Analysis  
-│  
-▼  
-Recommendations  
-
-Strong Concepts  
-│  
-▼  
-Reinforcement  
-
-Weak Areas  
-│  
-▼  
-Focused Learning Plan  
-
----
-
-## 🚀 FUTURE ENHANCEMENTS
-
-User History  
-│  
-▼  
-Long-Term Performance Tracking  
-│  
-▼  
-Advanced Difficulty Tuning  
-│  
-▼  
-Teacher Analytics Dashboard  
-│  
-▼  
-Coding & Subjective Answers  
-│  
-▼  
-Mobile-First Experience  
-
----
-
-<h3 align="center">
-✨ SmartQuizzer — Learn Smarter, Not Harder ✨
-</h3>
