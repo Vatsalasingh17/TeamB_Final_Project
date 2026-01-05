@@ -134,18 +134,23 @@ B
 Frontend (React UI)
 │
 ▼
+
 Backend API (Node.js + Express)
 │
 ▼
+
 OpenAI GPT Models
 │
 ▼
+
 Adaptive Difficulty Engine
 │
 ▼
+
 Evaluation Engine
 │
 ▼
+
 MongoDB Atlas
 
 🧩 Adaptive Quiz Logic
@@ -153,15 +158,19 @@ MongoDB Atlas
 User Answer
 │
 ▼
+
 AI Evaluation
 │
 ▼
+
 Performance Score
 │
 ▼
+
 Difficulty Adjustment
 │
 ▼
+
 Next Question Generated
 
 ✔ Correct answers → Slightly harder questions
@@ -172,21 +181,27 @@ Next Question Generated
 User
 │
 ▼
+
 Landing Page
 │
 ▼
+
 Quiz Configuration
 │
 ▼
+
 AI Quiz Generation
 │
 ▼
+
 Quiz Attempt
 │
 ▼
+
 AI Evaluation
 │
 ▼
+
 Performance Analysis & Feedback
 
 🧑‍💻 User Journey (Screen-wise)
@@ -195,12 +210,15 @@ Performance Analysis & Feedback
 User
 │
 ▼
+
 Platform Introduction
 │
 ▼
+
 Motivational Learning Message
 │
 ▼
+
 Start Learning / Continue as Guest
 
 2️⃣ Personalization Screen
@@ -208,15 +226,19 @@ Start Learning / Continue as Guest
 User Details
 │
 ▼
+
 Name Input
 │
 ▼
+
 Email (Optional)
 │
 ▼
+
 Trust via Helper Text
 │
 ▼
+
 Proceed to Quiz Setup
 
 3️⃣ Quiz Configuration Screen
@@ -224,12 +246,15 @@ Proceed to Quiz Setup
 Topic / Text / Document
 │
 ▼
+
 Difficulty Selection
 │
 ▼
+
 Number of Questions
 │
 ▼
+
 Generate AI Quiz
 
 4️⃣ Quiz Attempt Screen
@@ -237,15 +262,19 @@ Generate AI Quiz
 Question Display
 │
 ▼
+
 Progress Indicator (1/5, 2/5…)
 │
 ▼
+
 Answer Selection
 │
 ▼
+
 Previous / Next Navigation
 │
 ▼
+
 Submit Quiz
 
 5️⃣ Quiz Completion Summary
@@ -253,23 +282,29 @@ Submit Quiz
 Quiz Submission
 │
 ▼
+
 Score Calculation
 │
 ▼
+
 Correct vs Incorrect Analysis
 │
 ▼
+
 Skipped Questions
 │
 ▼
+
 Final Result Summary
 
 Actions
 │
 ▼
+
 Download Report
 │
 ▼
+
 Start New Quiz
 
 ✨ Key Features
@@ -277,21 +312,27 @@ Start New Quiz
 User Input
 │
 ▼
+
 AI Quiz Generation
 │
 ▼
+
 Adaptive Difficulty
 │
 ▼
+
 Real-Time Answer Evaluation
 │
 ▼
+
 Progress Tracking
 │
 ▼
+
 Downloadable Reports
 │
 ▼
+
 Personalized Learning Feedback
 
 🤖 AI Evaluation & Feedback
@@ -299,9 +340,11 @@ Personalized Learning Feedback
 Performance
 │
 ▼
+
 Analysis
 │
 ▼
+
 Recommendations
 
 AI-generated insights include:
@@ -319,20 +362,26 @@ Personalized study guidance
 Performance Data
 │
 ▼
+
 Weak Topic Detection
 │
 ▼
+
 Concept Identification
 │
 ▼
+
 Targeted Learning Suggestions
 
 Example
 │
 ▼
+
 ❌ Data Types
+
 │
 ▼
+
 ❌ JVM Architecture
 
 ✔ Focused
@@ -344,15 +393,19 @@ Example
 User History
 │
 ▼
+
 Long-Term Performance Tracking
 │
 ▼
+
 Advanced Difficulty Tuning
 │
 ▼
+
 Teacher / Admin Analytics Dashboard
 │
 ▼
+
 Coding & Subjective Answer Evaluation
 │
 ▼
