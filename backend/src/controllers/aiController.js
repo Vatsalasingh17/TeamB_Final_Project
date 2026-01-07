@@ -1,5 +1,6 @@
 const OpenAI = require("openai"); // integrate openAI
 
+// Initialize OpenAI client using API key from environment variables
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
