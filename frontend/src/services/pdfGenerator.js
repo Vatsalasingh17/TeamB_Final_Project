@@ -2,7 +2,7 @@ import { formatDate } from '../utils/helpers';
 
 export const generatePDFContent = (user, quizConfig, results, questions) => {
   return `
-AI QUIZ RESULTS
+QUIZ RESULTS
 ================
 
 Student: ${user.name}
