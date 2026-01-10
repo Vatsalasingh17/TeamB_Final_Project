@@ -53,7 +53,17 @@ export default function ResultsScreen({
     const listLines = lines.filter(l => /^\d+\.|^\-|^\u2022|^\*/.test(l) || /recommend/i.test(l));
 
     // Helper to strip markdown
-    const stripMarkdown = (str) => str.replace(/(\*\*|__|\*|_|`)/g, '').replace(/^\d+\.|^\-|^\u2022/, '').trim();
+    const stripMarkdown = (str) => {
+      if (!str) return '';
+      return str
+        .replace(/###/g, '') // Remove ### explicitly
+        .replace(/##/g, '') // Remove ## explicitly
+        .replace(/\*\*/g, '') // Remove ** explicitly
+        .replace(/__/g, '') // Remove __ explicitly
+        .replace(/^\s*[\-\*]\s+/gm, '') // Remove list bullets
+        .replace(/^#+\s+/gm, '') // Remove headers
+        .trim();
+    };
 
     if (listLines.length >= 1) {
       return listLines.slice(0, 4).map(stripMarkdown);

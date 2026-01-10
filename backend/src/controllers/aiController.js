@@ -89,7 +89,10 @@ Provide concise, motivating feedback with:
       model: "gpt-4o-mini",
       temperature: 0.6,
       max_tokens: 500,
-      messages: [{ role: "user", content: feedbackPrompt }]
+      messages: [
+        { role: "system", content: "You output plain text only. Do not use markdown like ** or ###." },
+        { role: "user", content: feedbackPrompt }
+      ]
     });
 
     res.json({
