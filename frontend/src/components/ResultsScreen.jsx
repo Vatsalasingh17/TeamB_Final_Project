@@ -51,13 +51,21 @@ export default function ResultsScreen({
 
     const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
     const listLines = lines.filter(l => /^\d+\.|^\-|^\u2022|^\*/.test(l) || /recommend/i.test(l));
-    if (listLines.length >= 1) return listLines.slice(0, 4).map(l => l.replace(/^\d+\.|^\-|^\u2022|^\*/, '').trim());
+
+    // Helper to strip markdown
+    const stripMarkdown = (str) => str.replace(/(\*\*|__|\*|_|`)/g, '').replace(/^\d+\.|^\-|^\u2022/, '').trim();
+
+    if (listLines.length >= 1) {
+      return listLines.slice(0, 4).map(stripMarkdown);
+    }
 
     const sentences = text.split(/(?<=[\.\!\?])\s+/).map(s => s.trim()).filter(Boolean);
     const good = sentences.filter(s => s.length > 30).slice(0, 3);
-    if (good.length) return good;
 
-    return lines.slice(0, 2);
+    // Also strip markdown from sentences just in case
+    if (good.length) return good.map(stripMarkdown);
+
+    return lines.slice(0, 2).map(stripMarkdown);
   };
 
   const suggestions = extractKeySuggestions(results.feedback);
@@ -238,14 +246,14 @@ export default function ResultsScreen({
               <div
                 key={idx}
                 className={`p-6 rounded-xl border-2 transition-all ${result.isCorrect
-                    ? 'border-green-200 bg-green-50'
-                    : 'border-red-200 bg-red-50'
+                  ? 'border-green-200 bg-green-50'
+                  : 'border-red-200 bg-red-50'
                   }`}
               >
                 <div className="flex items-start gap-4">
                   <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl ${result.isCorrect
-                      ? 'bg-green-600 text-white'
-                      : 'bg-red-600 text-white'
+                    ? 'bg-green-600 text-white'
+                    : 'bg-red-600 text-white'
                     }`}>
                     {result.isCorrect ? '✓' : '✗'}
                   </div>
