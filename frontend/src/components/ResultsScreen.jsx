@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Trophy, Brain, FileText, Download, RotateCcw, TrendingUp, TrendingDown } from 'lucide-react';
 import { generatePDFContent, downloadPDF } from '../services/pdfGenerator';
 import { SCREEN_TYPES } from '../utils/constants';
 import { getGradeFromPercentage } from '../utils/helpers';
 
 
-export default function ResultsScreen({ 
-  user, 
-  quizConfig, 
-  results, 
-  questions, 
-  setCurrentScreen, 
-  resetQuiz 
+export default function ResultsScreen({
+  user,
+  quizConfig,
+  results,
+  questions,
+  setCurrentScreen,
+  resetQuiz
 }) {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
@@ -50,13 +51,13 @@ export default function ResultsScreen({
 
     const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
     const listLines = lines.filter(l => /^\d+\.|^\-|^\u2022|^\*/.test(l) || /recommend/i.test(l));
-    if (listLines.length >= 1) return listLines.slice(0, 4).map(l => l.replace(/^\d+\.|^\-|^\u2022|^\*/,'').trim());
+    if (listLines.length >= 1) return listLines.slice(0, 4).map(l => l.replace(/^\d+\.|^\-|^\u2022|^\*/, '').trim());
 
     const sentences = text.split(/(?<=[\.\!\?])\s+/).map(s => s.trim()).filter(Boolean);
-    const good = sentences.filter(s => s.length > 30).slice(0,3);
+    const good = sentences.filter(s => s.length > 30).slice(0, 3);
     if (good.length) return good;
 
-    return lines.slice(0,2);
+    return lines.slice(0, 2);
   };
 
   const suggestions = extractKeySuggestions(results.feedback);
@@ -94,14 +95,14 @@ export default function ResultsScreen({
   return (
     <div className="min-h-screen p-4 py-8">
       <div className="max-w-4xl mx-auto space-y-6">
-        
+
         {/* Score Card */}
         <div className="card-lift motion-fade-up text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
-          
+
           <Trophy className="w-20 h-20 text-yellow-500 mx-auto mb-4 animate-bounce" />
           <h2 className="text-3xl font-bold text-gray-800 mb-2">Quiz Complete! 🎉</h2>
-          
+
           <div className="my-6">
             <div className={`text-7xl font-bold mb-2 text-${color}-600`}>
               {results.percentage}%
@@ -129,17 +130,17 @@ export default function ResultsScreen({
               <div className="text-xs text-gray-600">Unanswered</div>
             </div>
           </div>
-          
+
           <div className="flex gap-3 justify-center flex-wrap">
-            <button 
-              onClick={handleDownload} 
+            <button
+              onClick={handleDownload}
               className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition flex items-center gap-2 shadow-lg"
             >
               <Download className="w-5 h-5" />
               Download Report
             </button>
-            <button 
-              onClick={handleNewQuiz} 
+            <button
+              onClick={handleNewQuiz}
               className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition flex items-center gap-2 shadow-lg"
             >
               <RotateCcw className="w-5 h-5" />
@@ -186,8 +187,10 @@ export default function ResultsScreen({
             </div>
           </div>
 
-            <div className="prose max-w-none text-gray-700 whitespace-pre-line leading-relaxed bg-gradient-to-br from-white to-indigo-50 p-4 rounded-lg border border-indigo-50 shadow-sm motion-fade-in">
-            {results.feedback}
+          <div className="bg-gradient-to-br from-white to-indigo-50 p-4 rounded-lg border border-indigo-50 shadow-sm motion-fade-in">
+            <ReactMarkdown className="prose prose-indigo max-w-none text-gray-700 leading-relaxed">
+              {results.feedback}
+            </ReactMarkdown>
           </div>
 
           {/* Key suggestions chips */}
@@ -234,18 +237,16 @@ export default function ResultsScreen({
             {results.details.map((result, idx) => (
               <div
                 key={idx}
-                className={`p-6 rounded-xl border-2 transition-all ${
-                  result.isCorrect 
-                    ? 'border-green-200 bg-green-50' 
+                className={`p-6 rounded-xl border-2 transition-all ${result.isCorrect
+                    ? 'border-green-200 bg-green-50'
                     : 'border-red-200 bg-red-50'
-                }`}
+                  }`}
               >
                 <div className="flex items-start gap-4">
-                  <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl ${
-                    result.isCorrect 
-                      ? 'bg-green-600 text-white' 
+                  <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl ${result.isCorrect
+                      ? 'bg-green-600 text-white'
                       : 'bg-red-600 text-white'
-                  }`}>
+                    }`}>
                     {result.isCorrect ? '✓' : '✗'}
                   </div>
                   <div className="flex-1">
@@ -254,7 +255,7 @@ export default function ResultsScreen({
                         Q{idx + 1}. {result.question}
                       </p>
                     </div>
-                    
+
                     <div className="mb-3">
                       <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold">
                         📌 {result.subtopic}
@@ -294,7 +295,7 @@ export default function ResultsScreen({
 
         {/* Footer */}
         <div className="text-center py-4">
-          <button 
+          <button
             onClick={handleNewQuiz}
             className="text-indigo-600 hover:text-indigo-700 font-semibold flex items-center gap-2 mx-auto"
           >
