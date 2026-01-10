@@ -196,9 +196,9 @@ export default function ResultsScreen({
           </div>
 
           <div className="bg-gradient-to-br from-white to-indigo-50 p-4 rounded-lg border border-indigo-50 shadow-sm motion-fade-in">
-            <ReactMarkdown className="prose prose-indigo max-w-none text-gray-700 leading-relaxed">
-              {results.feedback}
-            </ReactMarkdown>
+            <div className="prose prose-indigo max-w-none text-gray-700 leading-relaxed whitespace-pre-line">
+              {stripMarkdown(results.feedback)}
+            </div>
           </div>
 
           {/* Key suggestions chips */}
